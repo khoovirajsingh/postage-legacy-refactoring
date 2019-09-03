@@ -1,2 +1,5 @@
 # postage-legacy-refactoring
-Practice refactoring legacy code in simple and safe steps
+Using mutation testing and approval testing to practice refactoring legacy code in simple and safe steps
+
+
+
