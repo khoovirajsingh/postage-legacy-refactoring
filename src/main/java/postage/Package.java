@@ -18,17 +18,13 @@ public class Package {
             return new SmallPackage().smallPostageInBaseCurrency();
         }
         if (isMedium()) {
-            return mediumPostageInBaseCurrency();
+            return new MediumPackage(weight).mediumPostageInBaseCurrency();
         }
         return largePostageInBaseCurrency();
     }
 
     private double largePostageInBaseCurrency() {
         return Math.max(weight, height * width * depth / 1000) * 6;
-    }
-
-    private double mediumPostageInBaseCurrency() {
-        return weight * 4;
     }
 
     private boolean isMedium() {
