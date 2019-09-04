@@ -15,7 +15,7 @@ public class Package {
 
     public double postageInBaseCurrency() {
         if (isSmall()) {
-            return smallPostageInBaseCurrency();
+            return new SmallPackage().smallPostageInBaseCurrency();
         }
         if (isMedium()) {
             return mediumPostageInBaseCurrency();
@@ -29,10 +29,6 @@ public class Package {
 
     private double mediumPostageInBaseCurrency() {
         return weight * 4;
-    }
-
-    private double smallPostageInBaseCurrency() {
-        return 120;
     }
 
     private boolean isMedium() {
