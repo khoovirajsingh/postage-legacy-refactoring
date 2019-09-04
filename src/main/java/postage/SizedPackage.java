@@ -1,7 +1,7 @@
 package postage;
 
 public abstract class SizedPackage {
-    static SizedPackage createSizedPackage(int depth, int height, int weight, int width) {
+    public static SizedPackage createSizedPackage(int depth, int height, int weight, int width) {
         if (isSmall(depth, height, weight, width)) {
             return new SmallPackage();
         }
