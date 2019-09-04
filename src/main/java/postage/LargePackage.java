@@ -1,6 +1,6 @@
 package postage;
 
-public class LargePackage extends SizedPackage {
+public class LargePackage extends Package {
     private final int depth;
     private final int height;
     private final int weight;
@@ -29,7 +29,7 @@ public class LargePackage extends SizedPackage {
         return width;
     }
 
-    double postageInBaseCurrency() {
+    public double postageInBaseCurrency() {
         return Math.max(getWeight(), getHeight() * getWidth() * getDepth() / 1000) * 6;
     }
 }

@@ -1,11 +1,11 @@
 package postage;
 
-public class SmallPackage extends SizedPackage {
+public class SmallPackage extends Package {
     public SmallPackage() {
     }
 
     @Override
-    double postageInBaseCurrency() {
+    public double postageInBaseCurrency() {
         return 120;
     }
 }

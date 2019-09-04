@@ -1,4 +1,4 @@
-import static postage.SizedPackage.createSizedPackage;
+import static postage.Package.createSizedPackage;
 
 public class Calculator {
     public Money calculate(int weight, int height, int width, int depth, Currency currency) {
