@@ -2,18 +2,8 @@ import postage.Package;
 
 public class Calculator {
     public Money calculate(int weight, int height, int width, int depth, Currency currency) {
-        double postageInBaseCurrency = postageInBaseCurrency(new Package(weight, height, width, depth));
+        double postageInBaseCurrency = new Package(weight, height, width, depth).postageInBaseCurrency();
         return convertCurrency(postageInBaseCurrency, currency);
-    }
-
-    private double postageInBaseCurrency(Package aPackage) {
-        if (aPackage.getWeight() <= 60 && aPackage.getHeight() <= 229 && aPackage.getWidth() <= 162 && aPackage.getDepth() <= 25) {
-            return 120;
-        }
-        if (aPackage.getWeight() <= 500 && aPackage.getHeight() <= 324 && aPackage.getWidth() <= 229 && aPackage.getDepth() <= 100) {
-            return aPackage.getWeight() * 4;
-        }
-        return Math.max(aPackage.getWeight(), aPackage.getHeight() * aPackage.getWidth() * aPackage.getDepth() / 1000) * 6;
     }
 
     private Money convertCurrency(double amountInBaseCurrency, Currency currency) {
