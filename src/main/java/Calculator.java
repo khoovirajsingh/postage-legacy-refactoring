@@ -1,9 +1,8 @@
-import postage.Package;
-import postage.SizedPackage;
+import static postage.SizedPackage.createSizedPackage;
 
 public class Calculator {
     public Money calculate(int weight, int height, int width, int depth, Currency currency) {
-        double postageInBaseCurrency = new Package(SizedPackage.createSizedPackage(depth, height, weight, width)).postageInBaseCurrency();
+        double postageInBaseCurrency = createSizedPackage(depth, height, weight, width).postageInBaseCurrency();
         return convertCurrency(postageInBaseCurrency, currency);
     }
 

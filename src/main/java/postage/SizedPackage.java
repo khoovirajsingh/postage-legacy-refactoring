@@ -19,5 +19,5 @@ public abstract class SizedPackage {
         return weight <= 60 && height <= 229 && width <= 162 && depth <= 25;
     }
 
-    abstract double postageInBaseCurrency();
+    public abstract double postageInBaseCurrency();
 }
