@@ -4,7 +4,7 @@ public class SmallPackage {
     public SmallPackage() {
     }
 
-    double smallPostageInBaseCurrency() {
+    double postageInBaseCurrency() {
         return 120;
     }
 }

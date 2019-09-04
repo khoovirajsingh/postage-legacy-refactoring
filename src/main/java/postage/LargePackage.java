@@ -29,7 +29,7 @@ public class LargePackage {
         return width;
     }
 
-    double largePostageInBaseCurrency() {
+    double postageInBaseCurrency() {
         return Math.max(getWeight(), getHeight() * getWidth() * getDepth() / 1000) * 6;
     }
 }

@@ -11,7 +11,7 @@ public class MediumPackage {
         return weight;
     }
 
-    double mediumPostageInBaseCurrency() {
+    double postageInBaseCurrency() {
         return getWeight() * 4;
     }
 }

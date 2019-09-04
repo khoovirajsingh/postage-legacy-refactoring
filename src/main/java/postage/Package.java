@@ -15,12 +15,12 @@ public class Package {
 
     public double postageInBaseCurrency() {
         if (isSmall()) {
-            return new SmallPackage().smallPostageInBaseCurrency();
+            return new SmallPackage().postageInBaseCurrency();
         }
         if (isMedium()) {
-            return new MediumPackage(weight).mediumPostageInBaseCurrency();
+            return new MediumPackage(weight).postageInBaseCurrency();
         }
-        return new LargePackage(depth, height, weight, width).largePostageInBaseCurrency();
+        return new LargePackage(depth, height, weight, width).postageInBaseCurrency();
     }
 
     private boolean isMedium() {
