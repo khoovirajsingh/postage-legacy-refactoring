@@ -1,6 +1,6 @@
 package postage;
 
-public class MediumPackage {
+public class MediumPackage extends SizedPackage {
     private final int weight;
 
     public MediumPackage(int weight) {
