@@ -7,11 +7,7 @@ public class MediumPackage extends Package {
         this.weight = weight;
     }
 
-    public int getWeight() {
-        return weight;
-    }
-
     public double postageInBaseCurrency() {
-        return getWeight() * 4;
+        return weight * 4;
     }
 }

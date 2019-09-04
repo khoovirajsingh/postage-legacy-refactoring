@@ -13,23 +13,7 @@ public class LargePackage extends Package {
         this.width = width;
     }
 
-    public int getDepth() {
-        return depth;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
     public double postageInBaseCurrency() {
-        return Math.max(getWeight(), getHeight() * getWidth() * getDepth() / 1000) * 6;
+        return Math.max(weight, height * width * depth / 1000) * 6;
     }
 }
