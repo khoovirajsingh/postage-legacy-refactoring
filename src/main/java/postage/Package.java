@@ -20,11 +20,7 @@ public class Package {
         if (isMedium()) {
             return new MediumPackage(weight).mediumPostageInBaseCurrency();
         }
-        return largePostageInBaseCurrency();
-    }
-
-    private double largePostageInBaseCurrency() {
-        return Math.max(weight, height * width * depth / 1000) * 6;
+        return new LargePackage(depth, height, weight, width).largePostageInBaseCurrency();
     }
 
     private boolean isMedium() {
