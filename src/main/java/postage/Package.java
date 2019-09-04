@@ -13,29 +13,13 @@ public class Package {
         this.depth = depth;
     }
 
-    public int getWeight() {
-        return weight;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public int getDepth() {
-        return depth;
-    }
-
     public double postageInBaseCurrency() {
-        if (getWeight() <= 60 && getHeight() <= 229 && getWidth() <= 162 && getDepth() <= 25) {
+        if (weight <= 60 && height <= 229 && width <= 162 && depth <= 25) {
             return 120;
         }
-        if (getWeight() <= 500 && getHeight() <= 324 && getWidth() <= 229 && getDepth() <= 100) {
-            return getWeight() * 4;
+        if (weight <= 500 && height <= 324 && width <= 229 && depth <= 100) {
+            return weight * 4;
         }
-        return Math.max(getWeight(), getHeight() * getWidth() * getDepth() / 1000) * 6;
+        return Math.max(weight, height * width * depth / 1000) * 6;
     }
 }
