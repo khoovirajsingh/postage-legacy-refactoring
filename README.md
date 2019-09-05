@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/khoovirajsingh/postage-legacy-refactoring.svg?style=svg)](https://circleci.com/gh/khoovirajsingh/postage-legacy-refactoring)  [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=khoovirajsingh_postage-legacy-refactoring&metric=alert_status)](https://sonarcloud.io/dashboard?id=khoovirajsingh_postage-legacy-refactoring)  [![codecov](https://codecov.io/gh/khoovirajsingh/postage-legacy-refactoring/branch/master/graph/badge.svg)](https://codecov.io/gh/khoovirajsingh/postage-legacy-refactoring)
+
+
 # postage-legacy-refactoring
 Using mutation testing and approval testing to practice refactoring legacy code in simple and safe steps:
 
